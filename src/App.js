@@ -6,13 +6,15 @@ import About from "./Pages/About";
 import Profile from "./Pages/Profile";
 
 function App() {
+  const phrase = "this is a test profileID phrase";
   return (
     <Router>
       {/* what is universally shown */}
+
       <nav>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link to="/profile/placeholderID/placeholderName">Profile</Link>
+        <Link to={"/profile/placeholderID/" + phrase}>Profile</Link>
       </nav>
       {/* specific routes to specific pages */}
       <Routes>
